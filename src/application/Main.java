@@ -40,6 +40,12 @@ public class Main {
 			sellerDao.insert(newSeller);
 			System.out.println("Inserted data! New id: " + seller.getId());
 			
+			System.out.println("\n======= TEST 5: Execute Update =======");
+			seller = sellerDao.findById(1);
+			seller.setName("Clark Cant");
+			sellerDao.update(seller);
+			System.out.println("Data updated! " + seller.getName());
+			
 			
 			
 			
